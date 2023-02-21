@@ -1,2 +1,2 @@
-# brunotakara.github.io
-Inteligência Artificial e Física Médica
+# Inteligência Artificial e Física Médica
+
