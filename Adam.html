@@ -136,6 +136,9 @@
             header.style.height = (header.style.height !== "25px" ? "25px" : "118px");
 
             header.classList.toggle("minimized");
+
+            // Alternar entre seta para cima e seta para baixo
+            minimizeButton.innerHTML = (minimizeButton.innerHTML === "&#x2B06;" ? "&#x2B07;" : "&#x2B06;");
         }
         
         document.addEventListener("scroll", function() {
