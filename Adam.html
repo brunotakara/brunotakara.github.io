@@ -26,6 +26,18 @@
             transition: background-color 0.3s ease;
         }
 
+        .minimize-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            color: #333333;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
         main {
             max-width: 1000px;
             margin: 20px auto;
@@ -60,6 +72,8 @@
     <header>
         <h1>Otimizador Adam</h1>
         <a href="https://brunotakara.github.io/" class="home-button">Página Inicial</a>
+        <button class="minimize-button" onclick="toggleHeader()">Minimizar</button>
+
     </header>
 
     <main>
@@ -100,6 +114,12 @@
         
     </main>
     <script>
+
+        function toggleHeader() {
+            var header = document.querySelector("header");
+            header.style.height = (header.style.height === "60px" ? "30px" : "60px");
+        }
+        
         document.addEventListener("scroll", function() {
             var scrollPosition = window.scrollY;
             var header = document.querySelector("header");
