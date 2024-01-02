@@ -14,6 +14,11 @@
             padding: 0;
         }
 
+        #container {
+            position: relative;
+            min-height: 60px; /* Altura mínima correspondente à altura do cabeçalho */
+        }
+
         header {
             background-color: #333333;
             color: #fff;
@@ -23,10 +28,10 @@
             width: 100%;
             top: 0;
             z-index: 1000; /* Garante que o cabeçalho apareça acima de outros elementos */
+            transition: background-color 0.3s ease;
         }
 
         main {
-            top: 220px; /* Garante que o conteúdo não fique oculto sob o cabeçalho fixo */
             max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
@@ -57,48 +62,49 @@
 </head>
 <body>
 
-    <header>
-        <h1>Otimizador Adam</h1>
-        <a href="https://brunotakara.github.io/" class="home-button">Página Inicial</a>
-    </header>
+    <div id="container">
+        <header>
+            <h1>Otimizador Adam</h1>
+            <a href="https://brunotakara.github.io/" class="home-button">Página Inicial</a>
+        </header>
 
-    <main>
-        <p> Antes de tudo precisamos saber o que é um otimizador.</p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        <p> Texto </p>
-        
-    </main>
+        <main>
+            <p> Antes de tudo precisamos saber o que é um otimizador.</p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            <p> Texto </p>
+            
+        </main>
     
     <script>
         document.addEventListener("scroll", function() {
