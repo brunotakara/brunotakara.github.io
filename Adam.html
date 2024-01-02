@@ -130,9 +130,11 @@
         
     </main>
     <script>
+        var minimizeButton; // Adicionando a declaração global da variável
 
         function toggleHeader() {
             var header = document.querySelector("header");
+            minimizeButton = document.querySelector(".minimize-button"); // Atribuindo o botão ao minimizeButton
             header.style.height = (header.style.height !== "25px" ? "25px" : "118px");
 
             header.classList.toggle("minimized");
