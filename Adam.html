@@ -133,11 +133,7 @@
 
         function toggleHeader() {
             var header = document.querySelector("header");
-            header.style.height = (header.style.height === "118px" ? "25px" : "118px");
-
-            void header.offsetHeight;
-            console.log("Altura atual do header:", header.style.height);
-
+            header.style.height = (header.style.height !== "25px" ? "25px" : "118px");
 
             header.classList.toggle("minimized");
         }
