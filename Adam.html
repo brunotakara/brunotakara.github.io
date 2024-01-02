@@ -26,8 +26,8 @@
         }
 
         main {
-            margin-top: 250px; /* Garante que o conteúdo não fique oculto sob o cabeçalho fixo */
-            max-width: 1200px;
+            margin-top: 400px; /* Garante que o conteúdo não fique oculto sob o cabeçalho fixo */
+            max-width: 1000px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -99,6 +99,15 @@
         <p> Texto </p>
         
     </main>
+    
+    <script>
+        document.addEventListener("scroll", function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector("header");
 
+            // Ajusta a transparência do cabeçalho com base na posição de rolagem
+            header.style.backgroundColor = "rgba(51, 51, 51, " + (scrollPosition > 0 ? 0.5 : 1) + ")";
+        });
+    </script>
 </body>
 </html>
