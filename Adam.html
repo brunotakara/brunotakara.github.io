@@ -135,13 +135,19 @@
         function toggleHeader() {
             var header = document.querySelector("header");
             minimizeButton = document.querySelector(".minimize-button"); // Atribuindo o botão ao minimizeButton
-            header.style.height = (header.style.height !== "25px" ? "25px" : "118px");
+
+            if (header.style.height !== "25px") {
+                header.style.height = "25px";
+                minimizeButton.innerHTML = "&#x2B07;"; // Ícone para baixo
+            } else {
+                header.style.height = "118px";
+                minimizeButton.innerHTML = "&#x2B06;"; // Ícone para cima
+            }
 
             header.classList.toggle("minimized");
-
-            // Alternar entre seta para cima e seta para baixo
-            minimizeButton.innerHTML = (minimizeButton.innerHTML === "&#x2B06;" ? "&#x2B07;" : "&#x2B06;");
         }
+
+
         
         document.addEventListener("scroll", function() {
             var scrollPosition = window.scrollY;
