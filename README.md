@@ -1,6 +1,6 @@
 # Inteligência Artificial e Física Médica
 
-Para acessar a Página Web: www.brunotakara.github.io
+Para acessar a Página Web: <a href="brunotakara.github.io">clique aqui</a>.
 
 Em breve trazendo conteúdos em português sobre Inteligência Artificial e Física Médica
 
