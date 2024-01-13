@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurônio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-AzSNx9tFpON5dJ0iSicj6pOMC7Zb9La2lqntRVdAovXTx5RL2GG9vo9eQb0SR1Sw" crossorigin="anonymous">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b00000;
+            margin: 0;
+            padding-top: 120px; /* Altura do cabeçalho fixo */
+        }
+
+        header {
+            background-color: #333333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000; /* Garante que o cabeçalho apareça acima de outros elementos */
+            transition: background-color 0.3s ease;
+        }
+
+        .minimize-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #fff;
+            color: #333333;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #dadada;
+            color: #333333;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .home-button i {
+            margin-right: 5px;
+        }
+        
+        .home-button:hover {
+            background-color: #fab333;
+            color: #333333;
+        }
+        
+        /* Ocultar botões de página inicial e título quando o cabeçalho está minimizado */
+        header.minimized .home-button,
+        header.minimized h1 {
+            opacity: 0;
+        }
+
+        .minimize-button i {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        /* Rotação da seta para cima ou para baixo */
+        header.minimized .minimize-button i {
+            transform: rotate(180deg);
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Neurônio</h1>
+        <a href="https://brunotakara.github.io/" class="home-button">&#x1F3E0; Página Inicial</a>
+        <button class="minimize-button" onclick="toggleHeader()">&#x2B06;</button>
+
+    </header>
+
+    <main>
+        <p> Um neurônio artificial é constituído de um conjunto de uma ´serie de operações matemáticas realizadas em um número que representa o dado de entrada. Esse número pode estar representando um valor, um caractere, uma imagem, etc. </p>
+        <br>
+        <p> Texto </p>
+        <p> Texto </p>
+
+      <!-
+        <figure>
+            <img src="relationship.png" alt="Relação entre AI, ML e DL" align="middle">
+            <figcaption>Fonte: TCS-83 da IAEA</figcaption>
+        </figure>
+      ->
+        
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        <p> Texto </p>
+        
+    </main>
+    <script>
+        var minimizeButton; // Adicionando a declaração global da variável
+
+        function toggleHeader() {
+            var header = document.querySelector("header");
+            minimizeButton = document.querySelector(".minimize-button"); // Atribuindo o botão ao minimizeButton
+
+            if (header.style.height !== "25px") {
+                header.style.height = "25px";
+                minimizeButton.innerHTML = "&#x2B07;"; // Ícone para baixo
+            } else {
+                header.style.height = "118px";
+                minimizeButton.innerHTML = "&#x2B06;"; // Ícone para cima
+            }
+
+            header.classList.toggle("minimized");
+        }
+
+
+        
+        document.addEventListener("scroll", function() {
+            var scrollPosition = window.scrollY;
+            var header = document.querySelector("header");
+
+            // Ajusta a transparência do cabeçalho com base na posição de rolagem
+            header.style.backgroundColor = "rgba(51, 51, 51, " + (scrollPosition > 0 ? 0.5 : 1) + ")";
+        });
+    </script>
+</body>
+</html>
